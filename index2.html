@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人</title>
+    <link rel="stylesheet" href="styles.css">
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+               <img src="logo.jpg" alt="Logo" height="100" heigh>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index1.html">首页</a></li>
+                <li><a href="index3.html">文章</a></li>
+                <li><a href="index4.html">关于工具</a></li>
+				<li><a href="index2.html">个人</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- 主内容区域 -->
+        <section>
+            <h1>个人简介和数据可视化</h1>
+            <p>这里是子页面的内容。</p>
+			<div class="container">
+        <div class="left-column">
+          <h3>个人简介</h3>
+          <p>大家好，我是罗应丽，一名网络与新媒体专业的学生。</p>
+          <p>我热衷于探索和应用最新的AI技术，以提高知识的整</p>
+          <p>理、存储和查询效率。为了实现这一目标，我搭建了</p>
+          <p>个人AI知识库，旨在通过系统化的知识管理，提升学</p>
+          <p>习和工作的效率。
+              
+              我的个人AI知识库不仅仅是一个信</p>
+          <p>息存储的仓库，更是一个帮助我系统化整理、归纳和</p>
+          <p>应用所学内容的工具。在这个知识库中，我收集并整</p>
+          <p>理了各种形式的信息，包括文档、笔记、图片、视频</p>
+          <p>和链接等。这些信息按照一定的逻辑和分类组织在一</p>
+          <p>起，形成了一个完整的知识体系。
+              
+              在搭建个人AI知识</p>
+          <p>库的过程中，我经历了需求分析、数据收集和处理、模</p>
+          <p>型构建以及交互界面设计等步骤。这个过程不仅让我对</p>
+          <p>AI技术有了更深入的了解，也让我更加高效地管理和利</p>
+          <p>用知识。通过实践，我发现这样的知识库不仅可以提高</p>
+          <p>我的学习效率，还能促进知识的内化和共享。
+              
+              未来，我</p>
+          <p>将继续优化和维护我的个人AI知识库，确保其内容的时效</p>
+          <p>性和准确性。同时，我也期待与更多的同行交流和分享，</p>
+            <p>共同推动人工智能和知识管理领域的发展。谢谢大家！</p>
+			<div><img alt="" src="个人简介.jpg" height="200"></div>
+        </div>
+        <div class="right-column">
+            <h3>图表实例</h3>
+			<p>
+				<!-- 折线图容器 -->
+    <canvas id="lineChart" width="400" height="200"></canvas>
+    <!-- 饼状图容器 -->
+    <canvas id="pieChart" width="400" height="200"></canvas>
+
+    <script>
+        // 折线图数据和配置
+        const lineCtx = document.getElementById('lineChart').getContext('2d');
+        const lineChart = new Chart(lineCtx, {
+            type: 'line',
+            data: {
+                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                datasets: [{
+                    label: 'My First dataset',
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    data: [65, 59, 80, 81, 56, 55, 40]
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Line Chart Example'
+                    }
+                }
+            }
+        });
+
+        // 饼状图数据和配置
+        const pieCtx = document.getElementById('pieChart').getContext('2d');
+        const pieChart = new Chart(pieCtx, {
+            type: 'pie',
+            data: {
+                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                datasets: [{
+                    label: 'My First dataset',
+                    data: [12, 19, 3, 5, 2, 3],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Pie Chart Example'
+                    }
+                }
+            }
+        });
+    </script>
+			</p>
+        </div>
+    </div>
+        </section>
+    </main>
+	<!-- Footer -->
+    <footer class="bg-light text-center text-lg-start mt-4">
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            &#169; 2024 个人知识库 | <a href="#" class="text-dark">隐私政策</a> | <a href="#" class="text-dark">社交媒体链接</a>
+        </div>
+    </footer>
+</body>
+</html>
+
